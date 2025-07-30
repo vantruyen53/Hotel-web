@@ -1,0 +1,6 @@
+.home header {
+    min-height: 100vh;
+    background-image: url(/HotelWeb/image/header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

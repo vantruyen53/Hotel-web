@@ -1,0 +1,165 @@
+.compenentNav nav li a{
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 400;
+}
+.compenentNav nav li a::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background:white;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.compenentNav nav li a:hover::before,
+.compenentNav nav li a.action::before{
+    width: 100%;
+    visibility: visible;
+}
+.compenentNav nav .logo{
+    width: 100px;
+    transition: all 0.5s ease-in-out;
+}
+.compenentNav nav .logo.scroll{
+    width: 80px;
+}
+.compenentNav nav .logo img{
+    width: 100%;
+}
+.compenentNav nav .toggle-btn{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.compenentNav nav .container-fluid{
+    transition: all 0.5s ease-in-out;
+}
+.compenentNav nav .container-fluid.scroll{
+    background-color: white;
+    opacity: 0.9;
+    padding: 3px !important;
+}
+.compenentNav nav li a.scroll{
+    color: black;
+}
+.compenentNav nav .action-btn.scroll{
+    color: black;
+    border-color: black;
+}
+.compenentNav nav .action-btn{
+    color: white;
+    font-size: 1.2rem;
+    border: 1.5px solid white;
+    border-radius: 12px;
+    padding: 10px 25px;
+    font-weight: 500;
+}
+.compenentNav nav .action-btn:hover{
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+}
+.compenentNav .dropDown{
+    width: 400px;
+    height: 100vh;
+    padding:0 50px;
+    overflow: hidden;
+    display: none;
+    transition: 0.3s;
+}
+.compenentNav .dropDown li{
+    margin:20px 0;
+}
+.compenentNav nav .dropDown .close-toggle-btn{
+    font-size: 30px;
+    display: block;
+    margin: 20px 0 20px 0px;
+}
+.compenentNav nav .dropDown.open{
+    display: block;
+}
+
+.componentFooter .book{
+    width: 500px;
+}
+.componentFooter .book a{
+    width: 100%;
+   border: 2px solid black;
+   color: black;
+   padding: 10px 0;
+   border-radius: 12px;
+}
+.componentFooter .book a:hover{
+    color: white;
+    background-color: black;
+}
+.componentFooter .quick-access a::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background:black;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.componentFooter .quick-access a:hover::before,
+.componentFooter .quick-access a.action::before{
+    width: 100%;
+    visibility: visible;
+}
+
+
+
+
+@media(min-width: 992px){
+    .compenentNav .dropDown{
+        display: none !important;
+    }
+}
+@media(max-width: 992px){
+    .compenentNav .link,
+    .compenentNav nav .container-fluid .action-btn
+    {
+        display: none !important;
+        overflow: hidden;
+    }
+    .compenentNav nav .toggle-btn{
+        display: block;
+    }
+    .compenentNav .dropDown{
+        width: 70vw;
+    }
+}
+@media(max-width: 768px){
+    .compenentNav nav li a{
+        font-size: 0.9rem;
+    }
+    .compenentNav nav .logo{
+        width: 60px;
+    }
+    .compenentNav nav .toggle-btn{
+        font-size: 20px;
+    }
+    .compenentNav .dropDown{
+        width: 100vw;
+    }
+    .componentFooter .book{
+        width: 100vw;
+    }
+    .componentFooter .logo-footer img{
+        width: 100px;
+    }
+    .componentFooter .logo-footer h1{
+        font-size: 20px ;
+    }
+    .componentFooter .logo-footer .address p{
+        font-size: 12px !important;
+    }
+}
