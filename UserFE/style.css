@@ -1,6 +1,1227 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+                                    /* Index-page */
+/* ********************************************************************************************************* */
 .home header {
     min-height: 100vh;
-    background-image: url(/HotelWeb/image/header.png);
+    background-image: url('../image/header.png');
     background-size: cover;
     background-repeat: no-repeat;
+}
+/* Header  */
+.home header .container-fluid{
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.8));
+}
+.home header .slogan-jp{
+    writing-mode: vertical-rl;
+    top: 200px;
+    right: 20%;
+}
+.home header .slogan-jp h1{
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+.home header .slogan-en{
+    right: 10%;
+    bottom: 0%;
+    padding: 5px;
+}
+.home header .slogan-en h4{
+    font-size: 30px;
+    font-weight: 100;
+    padding-bottom: 15px;
+}
+
+/* Section - About  */
+.home section.about .container-fluid{
+    height:100vh;
+    align-items: center;
+}
+.home section.about .container-fluid .img{
+    width: 100%;
+    height: 100%;
+}
+.home section.about .container-fluid .img img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+}
+.home section.about .content .title h1{
+    font-size: 3.5rem;
+}
+.home section.about .content .text h5{
+    line-height: 50px;
+    font-size: 1.5rem;
+    color: darkslategray;
+}
+
+/* Section - Serve  */
+.home section.serve {
+    background-color: black;
+    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+}
+.home section.serve > img{
+    bottom: 23%;
+    width: 700px;
+}
+.home section.serve .title-img{
+    padding: 200px 0 0px ;
+}
+.home section.serve .title-img img{
+    width: 100px;
+}
+.home section.serve .title h1{
+    font-size: 3.2rem;
+    letter-spacing: 10px;
+}
+.home section.serve .container{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.home section.serve .container > .row{
+    height: 700px;
+}
+.home section.serve .container >.row .col-12{
+    height: 100%;
+}
+.home section.serve .container .img .overlay{
+    position: absolute;
+    inset: 0;
+    margin: 1rem;
+    border: 1px solid white;
+    transition: .3s ease;
+    opacity: 0;
+}
+.home section.serve .container .img:hover .overlay{
+    opacity: 1;
+}
+.home section.serve .container .img .overlay .text{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+.home section.serve .container .img .overlay .text h2{
+    font-size: 1.3rem;
+}
+.home section.serve .container .img .overlay .text h5{
+    font-size: 1rem;
+}
+
+.home section.serve .content h5{
+    font-size: 1rem;
+    line-height: 30px;
+    letter-spacing: 3px;
+    padding-bottom: 100px;
+}
+.home section.serve .action-booking{
+    padding-bottom: 200px;
+}
+.home section.serve .action-booking a{
+    padding: 15px 40px;
+    border: 1px solid rgba(179, 177, 177, 0.655);
+    border-radius: 12px;
+    font-size: 1.5rem;
+    color: rgba(179, 177, 177, 0.655);
+    letter-spacing: 5px;
+}
+.home section.serve .action-booking a:hover{
+    color: white;
+    border-color: white;
+}
+
+
+
+/* Section - Rooms  */
+.home section.rooms .container-fluid{
+    padding: 0 150px;
+}
+.home section.rooms .container-fluid::before{
+    content: '';
+    position: absolute;
+    inset: 100px 0 0 0;
+    background-color: #ffffff;
+    background-image: url('/HotelWeb/image/pattner.png');
+    width: 30%;
+    height: 50%;
+    opacity: 0.6;
+    background-repeat: no-repeat;
+}
+.home section.rooms .title{
+    padding: 200px 0 100px 0;
+}
+.home section.rooms .title h1 {
+    font-size: 3.2rem;
+    letter-spacing: 5px;
+}
+.home section.rooms .title h5{
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: 10px;
+}
+.home section.rooms .room-imgs .room img{
+    width: 100%;
+}
+.home section.rooms .room-imgs .overlay{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.3s ease;
+    background-color: rgba(255, 228, 196,0.7);
+    justify-content: center;
+    color: darkblue;
+}
+.home section.rooms .room-imgs .room:hover .overlay{
+    opacity: 1;
+    cursor: pointer;
+}
+.home section.rooms .room-imgs .overlay h1{
+    font-weight:bold;
+    font-size: 3rem;
+    padding-bottom: 50px;
+    font-style: italic;
+}
+.home section.rooms .room-imgs .overlay h5{
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+
+/* why should us  */
+.home section.why-should-us {
+    padding: 200px 0;
+    background-image: url("https://www.transparenttextures.com/patterns/use-your-illusion.png");
+    background-color: black;
+}
+.home section.why-should-us::before{
+    content: '';
+    width: 700px;
+    height: 490px;
+    top: 100px;
+    right: 0;
+    position: absolute;
+    background-image: url(../image/whyshouldus-deco.png);
+    opacity: 0.2;
+    z-index: 1;
+    background-repeat: no-repeat;
+}
+.home section.why-should-us .row{
+    padding-bottom: 150px;
+}
+.home section.why-should-us .img{
+    width: 100%;
+}
+.home section.why-should-us  .img img{
+    width: 100%;
+    height: auto;
+    transition: 0.3s ease;
+}
+.home section.why-should-us .other-infor .item{
+    width: 200px;
+}
+.home section.why-should-us .other-infor .item img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+                                    /* services-page  */
+/* ********************************************************************************************************* */
+.service header{
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(9, 9, 9), black);
+}
+.service header .background{
+    height: 100%;
+}
+.service header .background img{
+    height: 100%;
+    width: auto;
+    position:as ;
+}
+.service header .content{
+    top: 30%;
+}
+.service header .content img{
+    width: 70px;
+}
+.service header .content .title{
+    font-size: 7rem;
+    letter-spacing: 13px;
+    margin-bottom: 60px;
+}
+.service header .content .sub{
+    font-size: 1rem;
+    letter-spacing: 5px;
+}
+
+/* SUMARY SERVICES  */
+.service section .summary-service .title{
+    padding: 100px 0 50px 0;
+}
+.service section .summary-service .title .img img{
+    width: 100px;
+    height: auto;
+    padding: 20px 0;
+}
+.service section .summary-service .title .content p{
+    font-size: 1.2rem;
+}
+.service section .summary-service .items .item{
+    width: 300px;
+    border: 15px solid lightgrey;
+}
+.service section .summary-service .items .item img{
+    width: 100%;
+}
+.service section .summary-service .items .item h5{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+}
+.service section .summary-service .items::before{
+    content: '';
+    position: absolute;
+    inset: 50% 0 0 0 ;
+    transform: translatey(-50%);
+    height: 150px;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zm20.97 0l9.315 9.314-1.414 1.414L34.828 0h2.83zM22.344 0L13.03 9.314l1.414 1.414L25.172 0h-2.83zM32 0l12.142 12.142-1.414 1.414L30 .828 17.272 13.556l-1.414-1.414L28 0h4zM.284 0l28 28-1.414 1.414L0 2.544V0h.284zM0 5.373l25.456 25.455-1.414 1.415L0 8.2V5.374zm0 5.656l22.627 22.627-1.414 1.414L0 13.86v-2.83zm0 5.656l19.8 19.8-1.415 1.413L0 19.514v-2.83zm0 5.657l16.97 16.97-1.414 1.415L0 25.172v-2.83zM0 28l14.142 14.142-1.414 1.414L0 30.828V28zm0 5.657L11.314 44.97 9.9 46.386l-9.9-9.9v-2.828zm0 5.657L8.485 47.8 7.07 49.212 0 42.143v-2.83zm0 5.657l5.657 5.657-1.414 1.415L0 47.8v-2.83zm0 5.657l2.828 2.83-1.414 1.413L0 53.456v-2.83zM54.627 60L30 35.373 5.373 60H8.2L30 38.2 51.8 60h2.827zm-5.656 0L30 41.03 11.03 60h2.828L30 43.858 46.142 60h2.83zm-5.656 0L30 46.686 16.686 60h2.83L30 49.515 40.485 60h2.83zm-5.657 0L30 52.343 22.343 60h2.83L30 55.172 34.828 60h2.83zM32 60l-2-2-2 2h4zM59.716 0l-28 28 1.414 1.414L60 2.544V0h-.284zM60 5.373L34.544 30.828l1.414 1.415L60 8.2V5.374zm0 5.656L37.373 33.656l1.414 1.414L60 13.86v-2.83zm0 5.656l-19.8 19.8 1.415 1.413L60 19.514v-2.83zm0 5.657l-16.97 16.97 1.414 1.415L60 25.172v-2.83zM60 28L45.858 42.142l1.414 1.414L60 30.828V28zm0 5.657L48.686 44.97l1.415 1.415 9.9-9.9v-2.828zm0 5.657L51.515 47.8l1.414 1.413 7.07-7.07v-2.83zm0 5.657l-5.657 5.657 1.414 1.415L60 47.8v-2.83zm0 5.657l-2.828 2.83 1.414 1.413L60 53.456v-2.83zM39.9 16.385l1.414-1.414L30 3.658 18.686 14.97l1.415 1.415 9.9-9.9 9.9 9.9zm-2.83 2.828l1.415-1.414L30 9.313 21.515 17.8l1.414 1.413 7.07-7.07 7.07 7.07zm-2.827 2.83l1.414-1.416L30 14.97l-5.657 5.657 1.414 1.415L30 17.8l4.243 4.242zm-2.83 2.827l1.415-1.414L30 20.626l-2.828 2.83 1.414 1.414L30 23.456l1.414 1.414zM56.87 59.414L58.284 58 30 29.716 1.716 58l1.414 1.414L30 32.544l26.87 26.87z' fill='%23fbcf00' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    z-index: -1;
+}
+
+/* TEA CEREMONY  */
+.service section .services{
+    width: 100%;
+    color:  rgb(3, 3, 100)
+}
+.service section .services .content{
+    width: 50%;
+    padding: 0 150px 50px;
+    background-color: rgb(247, 247, 232);
+}
+.service section .services .content .title{
+    padding: 300px 0 150px;
+}
+.service section .services .content .title h5::before{
+    content: '';
+    position: absolute;
+    inset: 0 ;
+    border-bottom: 5px solid darkblue;
+}
+.service section .services .content p{
+    font-size: 1.5rem;
+} 
+.service section .services .content .time{
+    border-top: 1px solid darkblue;
+    border-bottom: 1px solid darkblue;
+    width: 50%;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+.service section .services .content .time span{
+    font-weight: bold;
+}
+.service section .services .content .action-service{
+    padding-top: 80px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    align-items: center;
+    letter-spacing: 5px;
+}
+.service section .services .action-service button{
+    border: 2px solid darkblue;
+    border-radius: 12px;
+    padding: 10px 40px;
+}
+.service section .services .action-service button:hover{
+    background-color: darkblue;
+    color: white !important;
+}
+.service section .services .img img{
+    width: 100%;
+    height: 100vh;
+}
+
+/* Register service  */
+.service .register-service {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    z-index: 200;
+    background-color: rgba(40, 40, 40, 0.31);
+    display: none;
+}
+.service .register-service .modal-register{
+    padding: 50px 100px;
+    background-color: rgb(250, 250, 245);
+    border-radius: 32px;
+}
+.service .register-service .modal-register .close{
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: grey;
+}
+.service .register-service .modal-register .close:hover{
+    color: darkblue;
+}
+.service .register-service ul{
+    font-size: 1.2rem;
+    color: darkblue;
+    border-bottom: 1px solid darkblue;
+}
+.service .register-service ul li:hover,
+.service .register-service ul li.choose{
+    background-color:rgba(250, 250, 205, 1);
+    cursor: pointer;
+}
+.service .register-service .content-modal .img{
+    width: 25%;
+}
+.service .register-service .content-modal .img img{
+    width: 100%;
+    height: auto;
+}
+.service .register-service .content-modal .detail-infor{
+    flex: 1;
+}
+.service .register-service .content-modal form input{
+    background: transparent;
+    border: unset;
+    outline: unset;
+    border-bottom: 1px solid darkgray;
+    font-size: 20px;
+}
+.service .register-service .content-modal form .warning-label{
+    color: red;
+    text-align: end;
+    padding: 5px 5px 5px 0;
+    opacity: 0;
+}
+.service .register-service .content-modal form .warning-label.show{
+    opacity: 1;
+}
+.service .register-service .content-modal .detail-infor button,
+.service .register-service .footer-modal #action-book{
+    padding: 10px 50px;
+    font-size: 1.2rem;
+    color: darkblue;
+    border: 2px solid darkblue;
+    border-radius: 12px;
+    background: none;
+    font-weight: bold;
+    transition: 0.5 ease;
+}
+.service .register-service .content-modal .detail-infor button:active,
+.service .register-service .footer-modal #action-book:active{
+    scale: 0.95;
+}
+.service .register-service .footer-modal{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 30px 0 20px;
+}
+.service .register-service .footer-modal .type-service{
+    width: 20%;
+    padding: 15px;
+    background-color: rgba(245, 241, 237, 0.514);
+    border-radius: 12px;
+    color: darkblue;
+}
+.service .register-service .footer-modal .type-service .trash-can{
+    right: 10px;
+    cursor: pointer;
+}
+.service .register-service .footer-modal .type-service .service-name{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.service .register-service .footer-modal .type-service .row-infor{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.service .register-service .footer-modal .book-service .total-services{
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: darkblue;
+}   
+.service .book-service-success{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgba(40, 40, 40, 0.31);
+    display: none ;
+}
+.service .book-service-success .modal-message{
+    padding: 100px;
+    background-color: rgb(250, 250, 245);
+    border-radius: 32px;
+}
+.service .book-service-success .modal-message{
+    text-align: center;
+    color: darkblue;
+    font-size: 1.3rem;
+}
+.service .book-service-success .message-load{
+    stroke-dasharray: 628;
+    stroke-dashoffset: 628;
+    animation: draw 0.5s linear forwards;
+}
+@keyframes draw{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+                                    /* Menu-page */
+/* ********************************************************************************************************* */
+.menu header{
+    height: 100vh;
+    background-position: center;
+    background-image: url('../image/menu/header.jpeg');
+    background-size: cover;
+}
+.menu header::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+.menu header .content{
+    padding-right: 200px;
+}
+.menu header .content .item{
+    z-index: 1;
+}
+.menu header  .title{
+    font-size: 7rem;
+    letter-spacing: 13px;
+}
+.menu header p{
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    padding-bottom: 15px;
+}
+.menu header .sub{
+    font-size: 1.5rem;
+    letter-spacing: 7px;
+}
+
+/* Link menu */
+.menu .link-menu{   
+    padding: 80px 0 30px;
+    background-image: url('../image/whyshouldus-deco.png');
+    background-size: cover;
+    opacity: 0.7;
+}
+.menu .link-menu a{
+    font-size: 2rem;
+    color: darkblue;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+}
+.menu .link-menu a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background: darkblue;
+    transition: 0.3s ease-in-out;   
+    visibility: hidden;
+}
+.menu .link-menu a:hover::before,
+.menu .link-menu a.choose-menu::before{
+    width: 100%;
+    visibility: visible;
+}
+
+/* List menu  */
+.menu .list-menu{   
+    max-width: 900px;
+    padding: 80px 0;
+}
+.menu section.menu-infor{
+    background-color: #ffffff83;
+    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+}
+.menu .list-menu .title,
+.menu .children-menu .title,
+.menu .dinning-rooms .title h1{
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    color: darkblue;
+    padding: 150px 0 30px;
+} 
+.menu .dinning-rooms .title h5{
+    padding-bottom: 80px;
+    letter-spacing: 10px;
+    font-size: 1.1rem;
+    color: darkblue;
+}
+.menu .list-menu .menu-list{
+    min-width: 250px;
+}
+.menu .list-menu li{
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid darkblue;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: darkblue;
+}
+.menu .list-menu li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3b2b1c;
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+.menu .children-menu {
+    max-width: 600px;
+}
+.menu .children-menu p{
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: darkblue;
+}
+
+/* Dinning room  */
+.menu .dinning-rooms{
+    background-image: url('../image/whyshouldus-deco.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+.menu .dinning-rooms .img-overlay{
+    width: 100%;
+}
+.menu .dinning-rooms .img-overlay img{
+    width: 100%;
+    height: 100%;
+}
+.menu .dinning-rooms .img-overlay .overlay{
+    position: absolute;
+    inset: 0;
+    transition: .3s ease;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin: 20px;
+}
+.menu .dinning-rooms .img-overlay .overlay:hover{
+    border: 1px solid rgba(255, 255, 255, 1 );
+}
+.menu .dinning-rooms .img-overlay .overlay .text-overlay{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+.menu .dinning-rooms .img-overlay .overlay .text-overlay h2{
+    font-size: 2rem;
+    opacity: 1;
+}
+/* Meals  */
+.menu section .breakfast{
+    margin-top: 100px;
+}
+.menu section .dinner{
+    margin-bottom: 100px;
+}
+.menu section .img-meal{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.menu section .img-meal .myslide-1,
+.menu section .img-meal .myslide-2,
+.menu section .img-meal .myslide-3 {
+    display: none;
+}
+.menu section .img-meal .myslide-1 img,
+.menu section .img-meal .myslide-2 img,
+.menu section .img-meal .myslide-3 img{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.menu section .img-meal .prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 20px;
+    color: white;
+    font-weight: bolder;
+    font-size: 2rem ;
+    transition: .6s ease;
+    border-radius: 0 8px 8px 0;
+    user-select: none;
+}
+.menu section .img-meal .next{
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+.menu section .img-meal .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+.menu section .img-meal .myslide-1 .dish-name,
+.menu section .img-meal .myslide-2 .dish-name,
+.menu section .img-meal .myslide-3 .dish-name{
+    position: absolute;
+    font-size: 2.5rem;
+    bottom: 10%;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+/* intro meals  */
+.menu section .intro-meal {
+    padding: 0 150px;
+    color: darkblue;
+    background-color:rgb(247, 247, 232) ;
+}
+.menu section .intro-meal .title{
+    padding: 300px 0 200px;
+}
+.menu section .intro-meal .title h2{
+    font-size: 3.5rem;
+    letter-spacing: 7px;
+}
+.menu section .intro-meal .title p{
+    font-size: 1.3rem;
+    letter-spacing: 10px;
+}
+.menu section .intro-meal .title p::before{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background: darkblue;
+}
+.menu section .intro-meal  h5{
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+}
+
+
+
+                                    /* contact-page  */
+/* ********************************************************************************************************* */
+.contactus .contact {
+    background-image: url('../image/contactus.webp');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contactus .contact::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+} 
+.contactus .contact-infor > p:first-child{
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+.contactus .contact-infor h1{
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 4.5rem;
+    padding-bottom: 20px;
+}
+.contactus .contact-infor > :nth-child(3){
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+.contactus .contact-infor .infor-detail {
+    margin-top: 100px;
+}
+.contactus .contact-infor .infor-detail span{
+    font-weight: 700;
+}
+    .infor-detail p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.contactus .row .form-title{
+    margin-bottom: 70px;
+    font-size: 2rem;
+    font-weight: normal;
+}
+.contactus .row form input{
+    border: unset;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    color: white;
+}
+.contactus .row form .label-warning{
+    opacity: 0;
+}
+.contactus .row form textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white;
+    margin: 2rem 0 5rem;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    background: transparent;
+    color: white;
+}
+.contactus .row form  button{
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 40px;
+    background:transparent;
+    transition: 0.3s ease-in-out;
+    border-radius: 8px;
+}
+.contactus .row form  button:active{
+    scale: 0.7;
+}
+/* Map  */
+.contactus .map{
+    background-color: #ffffff83;
+    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+}
+.contactus .map img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    opacity: 0.3;
+}
+.contactus .map .title{
+    padding: 200px 0 50px;
+    font-size: 2.5rem;
+    letter-spacing: 5px ;
+}
+.contactus .map iframe{
+    margin: 100px 0;
+    width: 100%;
+    height: 400px;
+    border: 1px solid black;
+}
+
+
+
+                                    /* stay-Page  */
+/* ********************************************************************************************************* */
+.stay header{
+    height: 100vh;
+    background-image: url('../image/typeofroom/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.stay header::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+    height: 100%;
+}
+.stay header .title .main-title1{
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 15px;
+}
+.stay header .title .main-title2{
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.stay header .title .sub{
+    font-size: 1.3rem;
+    font-size: 400;
+    letter-spacing: 7px;
+    padding-bottom: 30px;
+}
+.stay section:first-of-type{
+    padding: 80px 0 30px;
+    background-color: #ffffff83;
+    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+}
+.stay .type-of-room a{
+    font-size: 1.3rem;
+    color: darkblue;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+}
+.stay .type-of-room a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background: darkblue;
+    transition: 0.3s ease-in-out;   
+    visibility: hidden;
+}
+.stay .type-of-room a:hover::before,
+.stay .type-of-room a.choose-menu::before{
+    width: 100%;
+    visibility: visible;
+}
+/* Rooms  */
+.stay main{
+    padding: 100px 0;
+    background-color: rgba(222, 217, 217, 0.1);
+}
+.stay main .container{
+    background-color: rgba(239, 239, 196, 0.381);
+}
+.stay main .container .infor-room img{
+    width: 100%;
+}
+.stay main .container .title{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: darkblue;
+    letter-spacing: 5px;
+}
+.stay main .container .infor-detail .descrip-room li{
+    justify-content: space-around;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    color: darkblue;
+}
+.stay main .container .infor-room p{
+    font-size: 1.5rem;
+    color: darkblue;
+    padding: 10px;
+}
+.stay main .container .calender-room .number-people {
+    font-size: 1.2rem;
+    color: darkblue;
+    justify-content: space-around;
+}
+.stay main .container .calender-room .number-people  .dis-num{
+    padding: 5px 20px;
+}
+.stay main .container .calender-room .number-people .reduce,.increase{
+    padding: 5px 15px;
+    font-size: 1rem;
+    border: 2px solid darkblue;
+    border-radius: 50%;
+}
+.stay main .container .calender-room .number-people .reduce:hover,.increase:hover{
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+}
+.stay main .container .calender-room .num-room select{
+    width: 100%;
+    padding: 5px;
+    font-size: 1.5rem;  
+    border-radius: 12px;
+    outline: none;
+    background: transparent;
+    color: darkblue;
+}
+.stay main .infor-room-footer{
+    font-size: 1.7rem;
+     color: darkblue;
+     letter-spacing: 5px;
+}
+.stay main .infor-room-footer a{
+    color:white;
+    background-color: darkblue;
+    border: 1px solid darkblue;
+    border-radius: 12px;
+    padding: 3px 30px;
+    transition: 0.3 ease-in-out;
+}
+.stay main .infor-room-footer a:active{
+    scale:0.9;
+}
+
+
+                                    /* book-room-Page  */
+/* ********************************************************************************************************* */
+.booking{
+    background-color: #ffffff83;
+    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+    z-index: -1;
+}
+
+.booking section .container{
+    margin-top: 150px;
+    padding: 50px 0;
+    border-radius: 24px;
+    background-color: rgb(248, 248, 231);
+}
+.booking .back{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: inline;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(169, 169, 169, 0.44);
+    color: white;
+}
+.booking .back:hover{
+    cursor: pointer;
+    background-color: rgb(79, 77, 77);
+}
+.booking .back:active{
+    scale: 0.9;
+}
+.booking form{
+    padding: 0 100px;
+}
+.booking .order-infor .room-name,
+.booking .user-infor .form-title{
+    color: darkblue;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.booking form input{
+    border: unset;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid darkblue;
+    font-size: 20px;
+    color: darkblue;
+}
+ .label-warning{
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
+.booking form textarea{
+    width: 100%;
+    border: 1px solid darkblue;
+    border-bottom: 1px solid darkblue;
+    margin: 2rem 0 1rem;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    background: transparent;
+    color: darkblue;
+}
+.booking form  button{
+    font-size: 20px;
+    color: darkblue;
+    border: 1px solid darkblue;
+    padding: 10px 40px;
+    background:transparent;
+    transition: 0.3s ease-in-out;
+    border-radius: 8px;
+}
+.booking form  button:active{
+    scale: 0.7;
+}
+.booking form .pay-method select{
+    width: 100%;
+    font-size: 1.1rem;
+    background: transparent;
+    color: darkblue;
+    padding: 5px  0 5px 10px;
+    outline: none;
+    border: 1px solid darkblue;
+}
+.booking .order-infor{
+    border-right:1px solid darkblue;
+}
+.booking .order-infor .group-item{
+    color: darkblue;
+}
+.booking .order-infor .group-item .item-sub{
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+}
+.booking .order-infor .group-item .item-main{
+    font-size: 1.5rem;
+    text-align: end;
+}
+/* ACOMPANYING SERIVIVES BOOKING */
+.booking .service-item {
+    color: darkblue;
+    background-color:   rgb(248, 248, 231);
+    padding: 30px;
+    border-radius: 24px;
+}
+.booking article .title-service{
+    color: darkblue;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.booking .service-item .service-infor .service-name{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+.booking .service-item .service-infor .ap,
+.booking .service-item .service-infor .pm,
+.booking .service-item .service-infor .warning,
+.booking .service-item .service-infor .price{
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+.booking .service-item .user-input-service input{
+    border: unset;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid darkblue;
+    font-size: 20px;
+    color: darkblue;
+}
+.booking .service-item .total-price,
+.booking .service-item .book-serive{
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+.booking .service-item .book-serive{
+    background-color: darkblue;
+    color: white;
+    padding: 5px 40px;
+    border-radius: 12px;
+}
+.booking .service-item .book-serive:hover{
+    cursor: pointer;
+}
+.booking .service-item .book-serive:active{
+    scale: 0.9;
+}
+.booking .service-item .img{
+    height: 275px;
+    overflow: hidden;
+}
+/* acompanying-service-booking */
+.booking .acompanying-service-booking  .type-service{
+    width: 45%;
+    padding: 15px;
+    background-color:white;
+    border-radius: 12px;
+    color: darkblue;
+}
+.booking .acompanying-service-booking  .type-service  .trash-can{
+    right: 10px;
+    cursor: pointer;
+}
+
+.booking .acompanying-service-booking  .type-service .service-name{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.booking .acompanying-service-booking  .type-service .row-infor{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/* footer-booking */
+.booking footer{
+   height: 150px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.booking footer .copy-right{
+    background-color:rgb(248, 248, 231);
+    color: darkblue;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+}
+
+
+
+@media(max-width: 992px){
+
+    .home header .slogan-jp{
+        top: 350px;
+        right: 250px;
+    }
+
+    .home header .slogan-jp h1{
+        font-size: 3rem;
+    }
+
+     .home header .slogan-en{
+        right: 100px;
+        bottom: 100px;
+    }
+
+    .home header .slogan-en h4{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media(max-width: 768px){
+    
+    .home header .slogan-jp{
+        top: 350px;
+        right: 250px;
+    }
+
+    .home header .slogan-jp h1{
+        font-size: 2.3rem;
+    }
+
+     .home header .slogan-en{
+        right: 100px;
+        bottom: 100px;
+    }
+
+    .home header .slogan-en h4{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 576px){
+    
+    .home header .slogan-jp{
+        top: 200px;
+        left: 70px;
+        right: unset;
+    }
+
+    .home header .slogan-jp h1{
+        font-size: 3rem;
+    }
+
+    .home header .slogan-en{
+        right: 100px;
+        bottom: 100px;
+    }
+    .home header .slogan-en h4{
+        font-size: 1.5rem;
+    }
 }

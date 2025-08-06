@@ -1,0 +1,1 @@
+<div class="book-room"><a href="../UserFE/stay.php" class="text-decoration-none">BOOK NOW</a></div> 

@@ -1,165 +1,230 @@
-.compenentNav nav li a{
-    font-size: 1.3rem;
-    color: white;
-    font-weight: 400;
-}
-.compenentNav nav li a::before{
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background:white;
-    visibility: hidden;
-    transition: 0.3s ease-in-out;
-}
-.compenentNav nav li a:hover::before,
-.compenentNav nav li a.action::before{
-    width: 100%;
-    visibility: visible;
-}
-.compenentNav nav .logo{
-    width: 100px;
-    transition: all 0.5s ease-in-out;
-}
-.compenentNav nav .logo.scroll{
-    width: 80px;
-}
-.compenentNav nav .logo img{
-    width: 100%;
-}
-.compenentNav nav .toggle-btn{
-    font-size: 30px;
-    cursor: pointer;
-    display: none;
-}
-.compenentNav nav .container-fluid{
-    transition: all 0.5s ease-in-out;
+.compenentNav nav .container-fluid {
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
 }
 .compenentNav nav .container-fluid.scroll{
-    background-color: white;
-    opacity: 0.9;
-    padding: 3px !important;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.compenentNav nav li a.scroll{
+
+/* Logo */
+.compenentNav nav .logo {
+  width: 120px;
+  transition: all 0.5s ease-in-out;
+}
+.compenentNav nav .logo img {
+  width: 100%;
+}
+.compenentNav nav .logo.scroll {
+  width: 80px;
+}
+
+/* <a>  */
+.compenentNav nav li a {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 400;
+}
+.compenentNav nav li a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: black;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+.compenentNav nav li a:hover::before,
+.compenentNav nav li a.action::before {
+  width: 100%;
+  visibility: visible;
+}
+.compenentNav nav .container-fluid li a.scroll {
+  display: none;
     color: black;
+}
+
+/* Action-btn  */
+.compenentNav nav .action-btn {
+  color: white;
+  font-size: 1.2rem;
+  border: 1.5px solid white;
+  border-radius: 12px;
+  padding: 10px 25px;
+  font-weight: 500;
+}
+.compenentNav nav .action-btn:hover {
+  border: 2px solid white;
+  color: black;
+  background-color: white;
 }
 .compenentNav nav .action-btn.scroll{
     color: black;
     border-color: black;
 }
-.compenentNav nav .action-btn{
-    color: white;
-    font-size: 1.2rem;
-    border: 1.5px solid white;
-    border-radius: 12px;
-    padding: 10px 25px;
-    font-weight: 500;
+/* Toggle  */
+.compenentNav nav .toggle-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
 }
-.compenentNav nav .action-btn:hover{
-    border: 2px solid black;
-    color: white;
-    background-color: black;
+.compenentNav nav .toggle-btn {
+  display: none;
 }
-.compenentNav .dropDown{
-    width: 400px;
-    height: 100vh;
-    padding:0 50px;
-    overflow: hidden;
-    display: none;
-    transition: 0.3s;
-}
-.compenentNav .dropDown li{
-    margin:20px 0;
-}
-.compenentNav nav .dropDown .close-toggle-btn{
-    font-size: 30px;
-    display: block;
-    margin: 20px 0 20px 0px;
-}
-.compenentNav nav .dropDown.open{
-    display: block;
+.compenentNav nav .toggle-btn.scroll {
+  display: block;
+  color: black;
 }
 
-.componentFooter .book{
-    width: 500px;
+/* Drop down menu  */
+.compenentNav .dropDown {
+  width: 400px;
+  height: 100vh;
+  padding: 0 50px;
+  overflow: hidden;
+  display: none;
+  transition: 0.3s;
+  z-index: 110;
 }
-.componentFooter .book a{
-    width: 100%;
-   border: 2px solid black;
-   color: black;
-   padding: 10px 0;
-   border-radius: 12px;
+.compenentNav nav .dropDown.open {
+  display: block;
+  backdrop-filter: blur(20px);
 }
-.componentFooter .book a:hover{
-    color: white;
-    background-color: black;
+.compenentNav .dropDown li {
+  margin: 20px 0;
 }
-.componentFooter .quick-access a::before{
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background:black;
-    visibility: hidden;
-    transition: 0.3s ease-in-out;
+.compenentNav nav .dropDown .close-toggle-btn {
+  font-size: 30px;
+  display: inline-block;
+  margin: 20px 0 20px 0px;
+  color: black;
+}
+.compenentNav nav .dropDown .close-toggle-btn:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 50%;
+}
+
+/* Action - btn - Drop down menu  */
+.compenentNav .dropDown a {
+  width: 100%;
+  display: block;
+}
+
+/* Footer  */
+/* ******************************************************************************* */
+.componentFooter .book {
+  width: 500px;
+}
+.componentFooter .book a {
+  width: 100%;
+  border: 2px solid black;
+  color: black;
+  padding: 10px 0;
+  border-radius: 12px;
+}
+.componentFooter .book a:hover {
+  color: white;
+  background-color: black;
+}
+.componentFooter .quick-access a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: black;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
 }
 .componentFooter .quick-access a:hover::before,
-.componentFooter .quick-access a.action::before{
-    width: 100%;
-    visibility: visible;
+.componentFooter .quick-access a.action::before {
+  width: 100%;
+  visibility: visible;
 }
 
-
-
-
-@media(min-width: 992px){
-    .compenentNav .dropDown{
-        display: none !important;
-    }
+/* Booking room  */
+/* ******************************************************************************* */
+.book-room a{
+    color: darkblue;
+    font-size: 1.5rem;
+    padding: 10px 50px;
+    border-radius: 8px;
+    border: 1px solid darkblue;
 }
-@media(max-width: 992px){
-    .compenentNav .link,
-    .compenentNav nav .container-fluid .action-btn
-    {
-        display: none !important;
-        overflow: hidden;
-    }
-    .compenentNav nav .toggle-btn{
-        display: block;
-    }
-    .compenentNav .dropDown{
-        width: 70vw;
-    }
+.book-room a:hover{
+    color: white;
+    background-color: darkblue;
 }
-@media(max-width: 768px){
-    .compenentNav nav li a{
-        font-size: 0.9rem;
-    }
-    .compenentNav nav .logo{
-        width: 60px;
-    }
-    .compenentNav nav .toggle-btn{
-        font-size: 20px;
-    }
-    .compenentNav .dropDown{
-        width: 100vw;
-    }
-    .componentFooter .book{
-        width: 100vw;
-    }
-    .componentFooter .logo-footer img{
-        width: 100px;
-    }
-    .componentFooter .logo-footer h1{
-        font-size: 20px ;
-    }
-    .componentFooter .logo-footer .address p{
-        font-size: 12px !important;
-    }
+
+/* Bcalender */
+/* ******************************************************************************* */
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+  .compenentNav .dropDown {
+    width: 70vw;
+  }
+
+  .compenentNav nav .link li {
+    display: none;
+  }
+
+  .compenentNav nav .toggle-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .compenentNav nav li a {
+    font-size: 0.9rem;
+  }
+  .compenentNav nav .logo {
+    width: 80px;
+  }
+  .compenentNav nav .toggle-btn {
+    font-size: 20px;
+  }
+  .compenentNav .dropDown {
+    width: 100vw;
+  }
+  .componentFooter .book {
+    width: 100vw;
+  }
+  .componentFooter .logo-footer img {
+    width: 100px;
+  }
+  .componentFooter .logo-footer h1 {
+    font-size: 20px;
+  }
+  .componentFooter .logo-footer .address p {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .compenentNav nav .logo {
+    width: 60px;
+  }
+
+  .compenentNav nav .logo.scroll {
+    width: 60px;
+  }
+
+  .compenentNav nav .action-btn {
+    font-size: 0.7rem;
+  }
 }
