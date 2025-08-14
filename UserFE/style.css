@@ -326,7 +326,7 @@ body {
     font-weight: bold;
 }
 .service section .services .content .action-service{
-    padding-top: 80px;
+    padding-top: 50px;
     font-size: 1.5rem;
     font-weight: normal;
     align-items: center;
@@ -347,13 +347,13 @@ body {
 }
 
 /* Register service  */
-.service .register-service {
+    .service .register-service {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 50px;
+    padding:200px 50px;
     z-index: 200;
     background-color: rgba(40, 40, 40, 0.31);
     display: none;
@@ -384,6 +384,8 @@ body {
 }
 .service .register-service .content-modal .img{
     width: 25%;
+    height: 375px;
+    overflow-y: hidden;
 }
 .service .register-service .content-modal .img img{
     width: 100%;
@@ -392,24 +394,18 @@ body {
 .service .register-service .content-modal .detail-infor{
     flex: 1;
 }
-.service .register-service .content-modal form input{
+.service .register-service .content-modal  input{
     background: transparent;
     border: unset;
     outline: unset;
     border-bottom: 1px solid darkgray;
     font-size: 20px;
 }
-.service .register-service .content-modal form .warning-label{
-    color: red;
-    text-align: end;
-    padding: 5px 5px 5px 0;
-    opacity: 0;
+.service .register-service .content-modal  input.error,
+.time-for-serive .set-time.error{
+    border: 2px solid red;
 }
-.service .register-service .content-modal form .warning-label.show{
-    opacity: 1;
-}
-.service .register-service .content-modal .detail-infor button,
-.service .register-service .footer-modal #action-book{
+.service .register-service .content-modal .detail-infor button{
     padding: 10px 50px;
     font-size: 1.2rem;
     color: darkblue;
@@ -419,69 +415,14 @@ body {
     font-weight: bold;
     transition: 0.5 ease;
 }
-.service .register-service .content-modal .detail-infor button:active,
-.service .register-service .footer-modal #action-book:active{
+.service .register-service .content-modal .detail-infor button:active{
     scale: 0.95;
 }
-.service .register-service .footer-modal{
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-    padding: 30px 0 20px;
-}
-.service .register-service .footer-modal .type-service{
-    width: 20%;
-    padding: 15px;
-    background-color: rgba(245, 241, 237, 0.514);
-    border-radius: 12px;
-    color: darkblue;
-}
-.service .register-service .footer-modal .type-service .trash-can{
-    right: 10px;
-    cursor: pointer;
-}
-.service .register-service .footer-modal .type-service .service-name{
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-.service .register-service .footer-modal .type-service .row-infor{
-    font-size: 1rem;
-    font-weight: bold;
-}
-.service .register-service .footer-modal .book-service .total-services{
+.service .register-service .total-services{
     font-size: 1.5rem;
     letter-spacing: 3px;
     color: darkblue;
-}   
-.service .book-service-success{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    background-color: rgba(40, 40, 40, 0.31);
-    display: none ;
-}
-.service .book-service-success .modal-message{
-    padding: 100px;
-    background-color: rgb(250, 250, 245);
-    border-radius: 32px;
-}
-.service .book-service-success .modal-message{
-    text-align: center;
-    color: darkblue;
-    font-size: 1.3rem;
-}
-.service .book-service-success .message-load{
-    stroke-dasharray: 628;
-    stroke-dashoffset: 628;
-    animation: draw 0.5s linear forwards;
-}
-@keyframes draw{
-    to{
-        stroke-dashoffset: 0;
-    }
-}
+}  
 
                                     /* Menu-page */
 /* ********************************************************************************************************* */
@@ -774,8 +715,8 @@ body {
     font-size: 20px;
     color: white;
 }
-.contactus .row form .label-warning{
-    opacity: 0;
+.contactus .row form input.error{
+    border: 2px solid red;
 }
 .contactus .row form textarea{
     width: 100%;
@@ -800,6 +741,56 @@ body {
 .contactus .row form  button:active{
     scale: 0.7;
 }
+/* Chatbox  */
+.contactus article{
+    height: 100vh;
+    background: #f8f9fa;
+}
+.contactus article .container-chat {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.contactus .container-introduction .title{
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+}
+.contactus .container-introduction .img{
+    width: 50px;
+    margin-bottom: 30px;
+}
+.contactus .container-introduction  .sub p{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.contactus article .container-input{
+    height: 100px;
+}
+.contactus article .container-input .input-box{
+    border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    outline: unset;
+}
+.contactus article .container-input input{
+    height: 50px;
+}
+.contactus article .container-input button{
+    background: transparent;
+    border: unset;
+    outline: unset;
+}
+.contactus article .container-input .btn-send{
+    font-size: 1.5rem;
+    color: darkgrey;
+}
+.contactus article .container-input .btn-send.send{
+    color: black;
+}
+.contactus article .container-input .btn-send:hover{
+    cursor: pointer;
+}
+
+
 /* Map  */
 .contactus .map{
     background-color: #ffffff83;
@@ -890,18 +881,26 @@ body {
 .stay main{
     padding: 100px 0;
     background-color: rgba(222, 217, 217, 0.1);
+    background: #f8f9fa;
 }
 .stay main .container{
-    background-color: rgba(239, 239, 196, 0.381);
+    background-color: rgba(241, 241, 241, 0.381);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ;
 }
 .stay main .container .infor-room img{
     width: 100%;
 }
 .stay main .container .title{
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: darkblue;
     letter-spacing: 5px;
+}
+.stay main .container .border .infor-detail .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkblue;
+    letter-spacing: unset;
 }
 .stay main .container .infor-detail .descrip-room li{
     justify-content: space-around;
@@ -915,7 +914,7 @@ body {
     padding: 10px;
 }
 .stay main .container .calender-room .number-people {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: darkblue;
     justify-content: space-around;
 }
@@ -947,7 +946,7 @@ body {
      color: darkblue;
      letter-spacing: 5px;
 }
-.stay main .infor-room-footer a{
+.stay main .infor-room-footer button{
     color:white;
     background-color: darkblue;
     border: 1px solid darkblue;
@@ -955,7 +954,7 @@ body {
     padding: 3px 30px;
     transition: 0.3 ease-in-out;
 }
-.stay main .infor-room-footer a:active{
+.stay main .infor-room-footer button:active{
     scale:0.9;
 }
 
@@ -963,8 +962,7 @@ body {
                                     /* book-room-Page  */
 /* ********************************************************************************************************* */
 .booking{
-    background-color: #ffffff83;
-    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+    background: #f8f9fa;
     z-index: -1;
 }
 
@@ -972,9 +970,10 @@ body {
     margin-top: 150px;
     padding: 50px 0;
     border-radius: 24px;
-    background-color: rgb(248, 248, 231);
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }
-.booking .back{
+.booking #back{
     position: absolute;
     top: 5%;
     left: 5%;
@@ -984,7 +983,7 @@ body {
     background-color: rgba(169, 169, 169, 0.44);
     color: white;
 }
-.booking .back:hover{
+.booking #back:hover{
     cursor: pointer;
     background-color: rgb(79, 77, 77);
 }

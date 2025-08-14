@@ -1,3 +1,15 @@
+<?php
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $checkIn = $_POST['checkIN'];
+    $checkOut = $_POST['checkOut'];
+    $adults = $_POST['numAdults'];
+    $childrens = $_POST['numChildrens'];
+    $roomImg = $_POST['img-room'];
+    $roomName = $_POST['room-name'];
+    $roomTotal = $_POST['room-total'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,57 +26,63 @@
 
     <title>Book</title>
 </head>
+<style>
+    .booking .user-infor .customer-input input.error{
+        border: 1px solid red;
+    }
+</style>
 <body class="booking">
 
-    <div class="back"><i class="fa-solid fa-angle-left"></i></div>
+    <div id="back"><i class="fa-solid fa-angle-left"></i></div>
 
-    <section>
+    <section class="mb-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-4 order-infor ">
-                    <div class="room-name text-center">WASHITSU</div>
-                    <div class="img px-4 mb-5 w-100"><img src="../image/Washitsu.jpg" alt="" width="100%"></div>
+                    <div class="room-name text-center"><?php echo $roomName?></div>
+                    <div class="img px-4 mb-5 w-100"><img src="<?php echo $roomImg; ?>" alt="" width="100%"></div>
                     <div class="date-selected d-flex justify-content-around">
                         <div class="group-item">
                             <div class="item-sub">CHECK IN</div>
-                            <div class="item-main">8/25/2025</div>
+                            <div class="item-main"><?php echo $checkIn?></div>
                         </div>
                         <div class="group-item">
                             <div class="item-sub">CHECK UOT</div>
-                            <div class="item-main">8/26/2025</div>
+                            <div class="item-main"><?php echo $checkOut?></div>
                         </div>
                     </div>
                     <div class="customer-number d-flex justify-content-around my-5">
                         <div class="group-item">
                             <div class="item-sub">ADULTS</div>
-                            <div class="item-main">2</div>
+                            <div class="item-main"><?php echo $adults?></div>
                         </div>
                         <div class="group-item">
                             <div class="item-sub">CHILDRENS</div>
-                            <div class="item-main">1</div>
+                            <div class="item-main"><?php echo $childrens?></div>
                         </div>
                     </div>
+                    <div class="titleRoom text-end pe-5 "><p style="color: darkblue; font-size: 2rem; font-weight:bold">TOTAL: $<?php echo $roomTotal?></p></div>
                 </div>
                 <div class="col-12 col-sm-8 user-infor">
                     <div class="form-title text-center">YOUR INFORMATION</div>
-                    <form action="" class="customer-input">
+                    <form action="" class="customer-input" id="customer-input-book">
                         <div class="username d-flex justify-content-between">
                            <div class="first-name d-flex flex-column gap-3">
-                                <input id="firstname" type="text" placeholder="Your first name *">
+                                <input name="firstname" class="user-infor-book" id="firstname" type="text" placeholder="Your first name *">
                                 <label for="firstname" class="label-warning text-end text-danger">Error</label>
                            </div>
                            <div class="last-name d-flex flex-column gap-3">
-                                <input id="lasttname" type="text" placeholder="Your last name *">
+                                <input name="lasttname" class="user-infor-book" id="lasttname" type="text" placeholder="Your last name *">
                                 <label for="lasttname" class="label-warning text-end text-danger">Error</label>
                            </div>
                         </div>
                         <div class="user-infor d-flex justify-content-between ">
                             <div class="user-phone d-flex flex-column gap-3">
-                                <input id="userphone" type="text" placeholder="Your phone *">
+                                <input name="userphone" class="user-infor-book" id="userphone" type="text" placeholder="Your phone *">
                                 <label for="userphone" class="label-warning text-end text-danger">Error</label>
                             </div>
                             <div class="user-email d-flex flex-column gap-3">
-                                <input id="useremail" type="text" placeholder="Your email *">
+                                <input name="useremail" class="user-infor-book" id="useremail" type="text" placeholder="Your email *">
                                 <label for="useremail" class="label-warning text-end text-danger">Error</label>
                             </div>
                         </div>
@@ -75,7 +93,7 @@
                         </div>
                         <textarea name="note" id="note" placeholder="Note ..."></textarea>
 
-                        <div class="acompanying-service-booking  d-flex flex-wrap gap-3 mb-5">
+                        <!-- <div class="acompanying-service-booking  d-flex flex-wrap gap-3 mb-5">
                             <div class="type-service position-relative ">
                                 <div class="trash-can position-absolute"><i class="fa-solid fa-trash-can"></i></div>
                                 <div class="service-name pb-3"><span>Tea ceremony</span></div>
@@ -102,16 +120,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="submit text-end "><button id="submit">BOOK</button></div>
+                        <input type="hidden" name="roomName" class="room-name" value="<?php echo $roomName?>">
+                        <input type="hidden" name="roomCheckIn" class="room-checkin" value="<?php echo $checkIn?>">
+                        <input type="hidden" name="roomCheckOut" class="room-checkout" value="<?php echo $checkOut?>">
+                        <input type="hidden" name="roomAdults" class="room-adults" value="<?php echo $adults?>">
+                        <input type="hidden" name="roomChildrens" class="room-childrens" value="<?php echo $childrens?>">
+                        <input type="hidden" name="roomTotal" class="room-total" value="<?php echo $roomTotal?>">
+
+                        <div class="submit text-end "><button>BOOK</button></div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <article >
+    <!-- <article >
         <div class="container px-5 mt-5">
             <div class="title-service text-center">ACOMPANYING SERIVIVES BOOKING</div>
             <div class="service-item mb-5">
@@ -260,20 +285,68 @@
             </div>
         </div>
     </article>
+     -->
 
     <footer>
         <div class="copy-right">Copyright © 2025 VANTRUYEN05. All right reserved.</div>
     </footer>
 
-
-
-
-
-
-
-    
-
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+
+
+        $(document).ready(function(){
+            $('#back').click(function(){
+                window.location.href = '../UserFE/stay.php';
+            });
+        });
+
+
+        const userInfor = document.querySelectorAll('.user-infor-book');
+
+        document.getElementById('customer-input-book').addEventListener('submit', function(e){
+            e.preventDefault();
+            let hasError = false;
+            let userPhoneInput = document.getElementById('userphone');
+            let userEmailInput = document.getElementById('useremail');
+
+            userInfor.forEach(item =>{
+                if(item.value.trim() ===""){
+                    hasError = true;
+                    item.classList.add('error')
+                }else{
+                    item.classList.remove('error');
+                }
+            })
+
+            const patternPhone = /^(03|07|09|86)[0-9]{8}$/;
+            let phoneResult = patternPhone.test(userPhoneInput.value.trim());
+            const patternEmail = /^[\w.-]+@gmail\.com$/;
+            let emailResult = patternEmail.test(userEmailInput.value.trim());
+            if(!phoneResult){
+                hasError = true;
+                userPhoneInput.classList.add('error');
+            }else{
+                userPhoneInput.classList.remove('error');
+            }
+            if(!emailResult){
+                hasError = true;
+                userEmailInput.classList.add('error');
+            }else{
+                userEmailInput.classList.remove('error');
+            }
+
+            if(hasError === false){
+                const form = document.getElementById('customer-input-book');
+                form.action ="../BE/inserBookingRoom.php";
+                form.method = "post";
+                form.submit();
+            }
+        })
+    </script>
+
+
+
     <script src="../components/custom.js"></script>
     <script src="../UserFE/custom.js"></script> 
 </body>

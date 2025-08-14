@@ -14,6 +14,7 @@
 
     <title>Services</title>
 </head>
+</style>
 <body class="service">
     <?php
         include('../components/navbar.php');
@@ -70,8 +71,8 @@
         <div class="services d-flex flex-wrap">
             <div class="content">
                 <div class="title text-center">
-                    <h1>TEA CEREMONY</h1>
-                    <h5 class="position-relative pb-4">IN 60 MINUTES</h5>
+                    <h1 class="title-service"></h1>
+                    <h5 class="position-relative pb-4">IN <span class="serviceDuration"></span> MINUTES</h5>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, autem!</p>
                 <div class="time ">
@@ -80,9 +81,9 @@
                     <div class="warning">No childrent from 16</div>
                 </div>
                 <div class="action-service d-flex align-item-center">
-                    <div class="price me-auto ">RATES FROM $30</div>
+                    <div class="price me-auto ">RATES FROM $ <span class="tea-ceremony-cost servicePrice"></span></div>
                     <div class="book position-relative">
-                        <button id="book-service" class="text-decoration-none text-primary-emphasis">BOOK NOW</button>
+                        <button  class="text-decoration-none text-primary-emphasis book-service">BOOK NOW</button>
                     </div>
                 </div>
             </div>
@@ -100,8 +101,8 @@
             </div>
             <div class="content">
                 <div class="title text-center">
-                    <h1>HOT SPRING</h1>
-                    <h5 class="position-relative pb-4">IN 30 MINUTES</h5>
+                    <h1 class="title-service"></h1>
+                    <h5 class="position-relative pb-4">IN <span class="serviceDuration"></span> MINUTES</h5>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, autem!</p>
                 <div class="time ms-auto">
@@ -110,9 +111,9 @@
                     <div class="warning">No childrent from 12</div>
                 </div>
                 <div class="action-service d-flex align-item-center">
-                    <div class="price me-auto ">RATES FROM $10</div>
+                    <div class="price me-auto ">RATES FROM $ <span class="hot-spring-cost servicePrice"></span></div>
                     <div class="book position-relative">
-                         <button id="book-service" class="text-decoration-none text-primary-emphasis">BOOK NOW</button>
+                         <button  class="text-decoration-none text-primary-emphasis book-service">BOOK NOW</button>
                     </div>
                 </div>
             </div>
@@ -124,8 +125,8 @@
         <div class="services d-flex flex-wrap">
             <div class="content">
                 <div class="title text-center">
-                    <h1>MASSAGE</h1>
-                    <h5 class="position-relative pb-4">IN 90 MINUTES</h5>
+                    <h1 class="title-service "></h1>
+                    <h5 class="position-relative pb-4">IN <span class="serviceDuration"></span> MINUTES</h5>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, autem!</p>
                 <div class="time ">
@@ -134,9 +135,9 @@
                     <div class="warning">No childrent from 16</div>
                 </div>
                 <div class="action-service d-flex align-item-center">
-                    <div class="price me-auto ">RATES FROM $100</div>
+                    <div class="price me-auto ">RATES FROM $ <span class="massage-cost servicePrice"></span></div>
                     <div class="book position-relative">
-                         <button id="book-service" class="text-decoration-none text-primary-emphasis">BOOK NOW</button>
+                         <button class="text-decoration-none text-primary-emphasis book-service">BOOK NOW</button>
                     </div>
                 </div>
             </div>
@@ -154,8 +155,8 @@
             </div>
             <div class="content">
                 <div class="title text-center">
-                    <h1>MEDITATION</h1>
-                    <h5 class="position-relative pb-4">IN 240 MINUTES</h5>
+                    <h1 class="title-service "></h1>
+                    <h5 class="position-relative pb-4">IN <span class="serviceDuration"></span> MINUTES</h5>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, autem!</p>
                 <div class="time ms-auto">
@@ -164,9 +165,9 @@
                     <div class="warning">No childrent from 16</div>
                 </div>
                 <div class="action-service d-flex align-item-center">
-                    <div class="price me-auto ">RATES FROM $35</div>
+                    <div class="price me-auto ">RATES FROM $ <span class="meditation-cost servicePrice"></span></div>
                     <div class="book position-relative">
-                         <button id="book-service" class="text-decoration-none text-primary-emphasis">BOOK NOW</button>
+                         <button  class="text-decoration-none text-primary-emphasis book-service">BOOK NOW</button>
                     </div>
                 </div>
             </div>
@@ -178,8 +179,8 @@
         <div class="services d-flex flex-wrap">
             <div class="content">
                 <div class="title text-center">
-                    <h1>SAUNA</h1>
-                    <h5 class="position-relative pb-4">IN 30 MINUTES</h5>
+                    <h1 class="title-service "></h1>
+                    <h5 class="position-relative pb-4">IN <span class="serviceDuration"></span> MINUTES</h5>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, autem!</p>
                 <div class="time ">
@@ -188,9 +189,9 @@
                     <div class="warning">No childrent from 16</div>
                 </div>
                 <div class="action-service d-flex align-item-center">
-                    <div class="price me-auto ">RATES FROM $35</div>
+                    <div class="price me-auto ">RATES FROM $ <span  class="sauna-cost servicePrice"></span></div>
                     <div class="book position-relative">
-                         <button id="book-service" class="text-decoration-none text-primary-emphasis">BOOK NOW</button>
+                         <button  class="text-decoration-none text-primary-emphasis book-service">BOOK NOW</button>
                     </div>
                 </div>
             </div>
@@ -201,116 +202,146 @@
     </section>
 
     <!-- Register services  -->
-    <div class="register-service" id="register-service">
-        
+    <div class="register-service " id="register-service">
         <div class="modal-register position-relative">
-
             <div id="close-book-service" class="close position-absolute"><i class="fa-solid fa-xmark"></i></div>
-
             <div class="header-modal">
                 <ul class="list-unstyled d-flex justify-content-evenly w-50 mb-0 m-auto">
-                    <li class="p-3" >TEA CEREMONY</li>
-                    <li class="p-3" >HOT SPRING</li>
-                    <li class="p-3" >MASSAGE</li>
-                    <li class="p-3" >MEDITATION</li>
-                    <li class="p-3" >SAUNA</li>
+                    <li class="p-3 type-of-service choose" ></li>
                 </ul>
             </div>
-
             <div class="content-modal d-flex gap-5 p-3 align-items-center">
-
-                <div class="img">
-                    <img src="../image/service/tea-ceremony.jpg" alt="">
+                <div class="img" >
+                    <img src="" alt="">
                 </div>
-                    
                 <div class="detail-infor d-flex flex-column ">
-                    <form action="" class="booking-service ">
-                        <div class="form-row d-flex flex-column gap-5 mb-4 flex-sm-row">
-                            <div class="input-group d-flex flex-column">
-                                <input type="text" id="name" placeholder="Your name *" />
-                                <label class="warning-label">Error</label>
+                    <form  class="booking-service" id="booking-service" method="post">
+                        <div class="form-row d-flex flex-column gap-5 mb-4 flex-sm-row mb-4">
+                            <div class="input-group d-flex flex-column ">
+                                <input class="user-infor-book-services" name="username"  type="text" id="name" placeholder="Your name *"/>
                             </div>
-
                             <div class="input-group d-flex flex-column">
-                                <input type="text" id="phone" placeholder="Your phone *" />
-                                <label class="warning-label">Error</label>
+                                <input class="user-infor-book-services" name="userphone" type="text" id="phone" placeholder="Your phone *"/>
                             </div>
                         </div>
-
-                        <div class="form-row d-flex flex-column gap-5 mb-4 flex-sm-row">
+                        <div class="form-row d-flex flex-column gap-5 mb-4 flex-sm-row mb-4">
                             <div class="input-group d-flex flex-column">
-                                <input type="text" id="gmail" placeholder="Your email *" />
-                                <label class="warning-label">Error</label>
+                                <input class="user-infor-book-services" name="useremail" type="text" id="useremail" placeholder="Your email *"/>
                             </div>
-
                             <div class="input-group d-flex flex-column">
-                                <input type="text" id="seats" placeholder="Seats *" />
-                                <label class="warning-label">Error</label>
+                                <input class="user-infor-book-services" name="userseats" type="number" min="1" id="seats" placeholder="Seats *"/>
                             </div>
                         </div>
-
-                        <div class="form-row d-flex flex-column gap-5 mb-4 flex-sm-row">
+                        <div class="form-row d-flex flex-column gap-5 mb-4 flex-sm-row  pb-5">
                             <div class="input-group d-flex flex-column">
-                                <input type="text" id="date" placeholder="Time"/>
-                                <label class="warning-label">Error</label>
+                                <?php include('../components/time.php');?>
                             </div>
                             <div class="input-group d-flex flex-column">
-                                <input type="text" id="time" placeholder="Date"/>
-                                <label class="warning-label">Error</label>
+                                <input class="user-infor-book-services" name="userdate" type="date" id="booking-service-date" placeholder="Date"/>
                             </div>
+                        </div>
+                        <input type="hidden" name="serviceID" id="hidden-option-service" value="">
+                        <div class="action-book d-flex justify-content-end align-items-center gap-5">
+                            <div class="total-services">TOTAL: $<span class="dis-total-services"></span></div>
+                            <input type="hidden" name="totalPrice" id="hidden-option-price" value="">
+                            <div class="text-center"><button type="submit" class="mx-auto" id="add">ADD</button></div>
                         </div>
                     </form>
-                    <button class="mx-auto" id="add">ADD</button>
-                </div>
-
-                
-            </div>
-
-            <div class="footer-modal">
-                <div class="list-services d-flex gap-3 pb-4">
-                    <div class="type-service position-relative">
-                        <div class="trash-can position-absolute"><i class="fa-solid fa-trash-can"></i></div>
-                        <div class="service-name pb-3"><span>Tea ceremony</span></div>
-                        <div class="group-infor d-flex gap-3">
-                            <div class="row-infor ">
-                                <div class="time pb-2">Time:<span class="fw-normal"> 11:00 am</span></div>
-                                <div class="seats">Seats:<span class="fw-normal"> 2</span></div>
-                            </div>
-                            <div class="row-infor">
-                                <div class="date pb-2">Date:<span class="fw-normal"> Aug 20, 2025</span></div>
-                                <div class="prices">Price: $<span class="fw-normal">70</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="book-service d-flex justify-content-end align-items-center gap-5">
-                    <div class="total-services">TOTAL: $<span>70</span></div>
-                    <button id="action-book" type="submit">BOOK</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Message registration successfully  -->
-    <div class="book-service-success align-items-center justify-content-center" id="book-service-success">
-        <div class="modal-message">
-            <div class="message-load">
-                <svg width="300" height="300">
-                    <circle cx="150" cy="150" r="100" stroke="darkblue" stroke-width="5" fill="none" />
-                    <text class="messageContent" x="150" y="145" font-size="1.3rem" text-anchor="middle" fill="darkblue">Registration</text>
-                    <text class="messageContent" x="150" y="180" font-size="1.3rem" text-anchor="middle" fill="darkblue">Successfully</text>
-                </svg>
-            </div>
-            <div class="messageContent">Thanks for Choosing 😊</div>
-        </div>
-    </div>
+    <?php
+        include('../components/modalMessageSuccess.php')
+    ?>
 
     <?php
         include('../components/footer.php');
     ?>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        const btnBookService = document.querySelectorAll('.book-service');
+
+        
+        // Load services infor 
+        const serviceName = document.querySelectorAll('.title-service');
+        const serviceDuration = document.querySelectorAll('span.serviceDuration');
+        const servicePrice = document.querySelectorAll('.servicePrice');
+        document.addEventListener('DOMContentLoaded', function(){
+            console.log('DOM fully loaded');     
+            fetch('../BE/requestServicesInfor.php')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach((item, index) => {
+                    if (serviceName[index]){ 
+                        serviceName[index].textContent = item.serviceName;
+                    };
+                    if (serviceDuration[index]){ 
+                        serviceDuration[index].textContent = item.serviceDuration;
+                    };
+                    if (servicePrice[index]) {
+                        servicePrice[index].textContent = item.servicePrice
+                    };
+                     if (btnBookService[index]) {
+                        btnBookService[index].dataset.serviceId = item.serviceID || item.id;
+                        btnBookService[index].dataset.serviceName = item.serviceName;
+                        btnBookService[index].dataset.servicePrice = item.servicePrice;
+                    }
+                });
+            })
+        });
+        // Display img and infor of service selected
+        let currentSelectedService = '';
+        let price = 0;
+        btnBookService.forEach(btn =>{
+            btn.addEventListener('click', function(){
+                const serviceId = this.dataset.serviceId;
+                const serviceName = this.dataset.serviceName;
+                price = this.dataset.servicePrice;
+                console.log(serviceId);
+                console.log(serviceName);
+                console.log(price);
+                currentSelectedService = {
+                    id: serviceId,
+                    name: serviceName,
+                    price: parseFloat(price)
+                };     
+                document.getElementById('hidden-option-service').value = serviceId;
+                updateModalContent(currentSelectedService);
+            })
+        })
+        document.getElementById('seats').addEventListener('input', function(){
+            const userSeat = parseInt(this.value);
+            const totalPrice = price*userSeat;
+            document.querySelector('.dis-total-services').textContent = totalPrice;
+            document.getElementById('hidden-option-price').value = totalPrice;
+        })
+        function updateModalContent(service){
+            const serviceName =  service.name;
+            const servicePrice = service.price;
+            const serviceImg = document.querySelector('.register-service .modal-register .img img');
+            const serviceId = service.id;
+            const typyOfService = document.querySelector('.type-of-service.choose');
+            if(serviceName.trim().toUpperCase() === 'TEA CEREMONY'){
+                serviceImg.src = '../image/service/tea-ceremony.jpg';
+                typyOfService.innerHTML = serviceName.toUpperCase();
+            }else if(serviceName.trim().toUpperCase() === 'HOT SPRING'){
+                serviceImg.src = '../image/service/hot-spring2.jpg';
+                typyOfService.innerHTML = serviceName.toUpperCase();
+            }else if(serviceName.trim().toUpperCase() === 'MASSAGE'){
+                serviceImg.src = '../image/service/massage.avif';
+                typyOfService.innerHTML = serviceName.toUpperCase();
+            } else if(serviceName.trim().toUpperCase() === 'MEDITATION'){
+                serviceImg.src = '../image/service/meditation2.jpg';
+                typyOfService.innerHTML = serviceName.toUpperCase();
+            }else if(serviceName.trim().toUpperCase() === 'SAUNA'){
+                serviceImg.src = '../image/service/sauna.jpg';
+                typyOfService.innerHTML = serviceName.toUpperCase();
+            }
+        };
+    </script>
     <script src="../components/custom.js"></script>
     <script src="../UserFE/custom.js"></script>
 </body>

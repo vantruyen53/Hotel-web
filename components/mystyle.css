@@ -162,12 +162,173 @@
     background-color: darkblue;
 }
 
-/* Bcalender */
+/* Modal messeg success */
 /* ******************************************************************************* */
+ .book-service-success{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgba(40, 40, 40, 0.31);
+    display: none ;
+}
+ .book-service-success .modal-message{
+    padding: 100px;
+    background-color: rgb(250, 250, 245);
+    border-radius: 32px;
+}
+ .book-service-success .modal-message{
+    text-align: center;
+    color: darkblue;
+    font-size: 1.3rem;
+}
+ .book-service-success .message-load{
+    stroke-dasharray: 628;
+    stroke-dashoffset: 628;
+    animation: draw 0.5s linear forwards;
+}
+@keyframes draw{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Time */
+/* ******************************************************************************* */
+.time-for-serive .set-time{
+  width: 100%;
+  height: 34px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  background: transparent;
+  font-size: 20px;
+}
+.time-for-serive .set-time span{
+  padding: 0 0 0 10px;
+}
+.timtime-for-serivee ul .frame-time{
+  font-weight: bold;
+  font-size: 20px;
+}
+.time-for-serive ul li{
+  font-size: 20px;
+}
+.time-for-serive ul li:hover{
+  background-color: rgba(248, 232, 212, 0.512);
+  cursor: pointer;
+}
+.time-for-serive .dropdownmenu{
+  display: none;
+}
+.time-for-serive .dropdownmenu.show{
+  display: block;
+}
 
 
+/* Check date */
+/* ******************************************************************************* */
+/* .check-date .group-check .item{
+  color: darkblue;
+  font-size: 0.9rem;
+}
+.check-date .group-check .input-date{
+  border: unset;
+  outline: unset;
+  background: transparent;
+  border-bottom: 1px solid darkblue;
+  width: 100%;
+}
+.check-date .group-check .input-date.error{
+  border: 1px solid red;
+} */
+ 
+/* Number Customer */
+/* ******************************************************************************* */
+.number-people .type-peo input{
+  border: unset;
+  outline: unset;
+  background: transparent;
+  border-bottom: 1px solid darkblue;
+}
 
+/* Celender */
+/* ******************************************************************************* */
+:root {
+    --primary: #3B82F6;
+    --primary-light: #DBEAFE;
+    --primary-dark: #1E3A8A;
+    --background: #F9FaFB;
+    --success: #d1fae5;
+    --success-text: #065f46;
+    --error: #fee2e2;
+    --erro-text: #b91c1c;
+}
+.calnerder-of-room .calender{
+    max-width: 300px;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.calnerder-of-room .calender .nav-btn-calender{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.calnerder-of-room .calender .nav-btn-calender .nav-btn{
+    font-size: 1rem;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+.calnerder-of-room .calender .calendar-grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 5px;
 
+}
+.calnerder-of-room .day, .day-name {
+    text-align: center;
+}
+.calnerder-of-room .day {
+    background: #FFF;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.calnerder-of-room .day:hover {
+    background: #f3f4f6;
+}
+
+.calnerder-of-room .day.today {
+    background: var(--primary-light);
+    border-color: var(--primary-dark)
+}
+.calnerder-of-room .day.choosed{
+    background-color: navajowhite;
+    border-color: var(--primary-dark)
+}
+.calnerder-of-room .day.past-day{
+    color: darkgray;
+    text-decoration: line-through;
+    pointer-events:none;
+}
+
+.calnerder-of-room .date-number {
+    font-weight: bold;
+}
 
 
 
